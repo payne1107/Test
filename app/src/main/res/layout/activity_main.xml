@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ccc"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="test.wd.com.demo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_step"
+        android:text="步骤指示器"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_update_apk"
+        android:text="更新apk版本"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_perimission"
+        android:text="权限管理"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_status"
+        android:text="沉浸式状态栏"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>
