@@ -57,7 +57,7 @@ public class AllSignUpFragment extends Fragment {
 
     @PermissionSuccess(requestCode = 1100)
     public void openContact(){
-        Toast.makeText(getActivity(), "11111111111111111111111111111111", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "11111111111111111111111111111122211", Toast.LENGTH_SHORT).show();
     }
 
     @PermissionFail(requestCode = 1100)
