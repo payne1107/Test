@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,12 +16,13 @@ import kr.co.namee.permissiongen.PermissionFail;
 import kr.co.namee.permissiongen.PermissionGen;
 import kr.co.namee.permissiongen.PermissionSuccess;
 import test.wd.com.demo.R;
+import test.wd.com.demo.base.BaseFragment;
 
 /**
  * Created by 92457 on 2018/3/31.
  */
 
-public class AllSignUpFragment extends Fragment {
+public class AllSignUpFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class AllSignUpFragment extends Fragment {
     }
 
     @PermissionSuccess(requestCode = 1100)
-    public void openContact(){
+    public void openContact() {
         Toast.makeText(getActivity(), "11111111111111111111111111111122211", Toast.LENGTH_SHORT).show();
     }
 

@@ -11,6 +11,8 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
+import test.wd.com.demo.activity.BannerClickActivity;
+import test.wd.com.demo.activity.ImeiInfoActivity;
 import test.wd.com.demo.activity.PermissionActivity;
 import test.wd.com.demo.activity.StatusBarActivity;
 import test.wd.com.demo.activity.StepActivity;
@@ -35,10 +37,14 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Button btnUpdateApk = (Button) findViewById(R.id.btn_update_apk);
         Button btn_perimission = (Button)findViewById(R.id.btn_perimission);
         Button btnStatus = (Button) findViewById(R.id.btn_status);
+        Button btnIMEI = (Button) findViewById(R.id.btn_imei);
+        Button btnAndroidJS = (Button) findViewById(R.id.btn_andriod_Js);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
         btnUpdateApk.setOnClickListener(this);
         btnStatus.setOnClickListener(this);
+        btnIMEI.setOnClickListener(this);
+        btnAndroidJS.setOnClickListener(this);
     }
 
 
@@ -57,6 +63,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.btn_status:
                 startActivity(new Intent(mContext, StatusBarActivity.class));
+                break;
+            case R.id.btn_imei:
+                startActivity(new Intent(mContext, ImeiInfoActivity.class));
+                break;
+            case R.id.btn_andriod_Js:
+                startActivity(new Intent(mContext, BannerClickActivity.class));
                 break;
         }
     }

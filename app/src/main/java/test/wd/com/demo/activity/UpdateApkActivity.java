@@ -22,7 +22,6 @@ import util.UpdateAppUtils;
  */
 
 public class UpdateApkActivity extends FragmentActivity implements View.OnClickListener {
-
     private static final int UPDATE_APK_CODE = 200;
     private Context mContext;
 

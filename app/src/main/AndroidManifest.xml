@@ -63,6 +63,14 @@
             android:name=".activity.StatusBarActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.ImeiInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.BannerClickActivity"
+            android:screenOrientation="portrait" />
+
         <service android:name=".service.DownloadService" />
     </application>
 
