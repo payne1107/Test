@@ -1,4 +1,4 @@
-package test.wd.com.demo;
+package test.wd.com.demo.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import test.wd.com.demo.R;
 
 /**
  * Created by 92457 on 2018/2/5.item_tg_task_content

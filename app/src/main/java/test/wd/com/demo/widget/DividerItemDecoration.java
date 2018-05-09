@@ -1,4 +1,4 @@
-package test.wd.com.demo;
+package test.wd.com.demo.widget;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import test.wd.com.demo.R;
 
 /**
  * Created by 92457 on 2018/2/5.

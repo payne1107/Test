@@ -13,6 +13,7 @@ import java.util.List;
 
 import test.wd.com.demo.activity.BannerClickActivity;
 import test.wd.com.demo.activity.ImeiInfoActivity;
+import test.wd.com.demo.activity.LetterSearchActivity;
 import test.wd.com.demo.activity.PermissionActivity;
 import test.wd.com.demo.activity.StatusBarActivity;
 import test.wd.com.demo.activity.StepActivity;
@@ -39,12 +40,14 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Button btnStatus = (Button) findViewById(R.id.btn_status);
         Button btnIMEI = (Button) findViewById(R.id.btn_imei);
         Button btnAndroidJS = (Button) findViewById(R.id.btn_andriod_Js);
+        Button btnLetterSearch = (Button) findViewById(R.id.btn_Letter_search);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
         btnUpdateApk.setOnClickListener(this);
         btnStatus.setOnClickListener(this);
         btnIMEI.setOnClickListener(this);
         btnAndroidJS.setOnClickListener(this);
+        btnLetterSearch.setOnClickListener(this);
     }
 
 
@@ -69,6 +72,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.btn_andriod_Js:
                 startActivity(new Intent(mContext, BannerClickActivity.class));
+                break;
+            case R.id.btn_Letter_search:
+                //字母检索
+                startActivity(new Intent(mContext, LetterSearchActivity.class));
                 break;
         }
     }

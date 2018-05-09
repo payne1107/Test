@@ -10,9 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.wd.com.demo.DividerItemDecoration;
+import test.wd.com.demo.widget.DividerItemDecoration;
 import test.wd.com.demo.R;
-import test.wd.com.demo.TGTaskContentAdapter;
+import test.wd.com.demo.adapter.TGTaskContentAdapter;
 
 /**
  * Created by 92457 on 2018/3/29.
