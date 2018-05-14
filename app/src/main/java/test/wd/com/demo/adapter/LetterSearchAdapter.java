@@ -2,7 +2,6 @@ package test.wd.com.demo.adapter;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,7 +86,6 @@ public class LetterSearchAdapter extends BaseAdapter{
             holder.name.setText(city);
             String currentLetter = PinyinUtils.getFirstLetter(mList.get(position).getPinyin());
             String previousLetter = position >= 1 ? PinyinUtils.getFirstLetter(mList.get(position - 1).getPinyin()) : "";
-            Log.d("Dong", "currentLetter:" + currentLetter + "previousLetter :" +previousLetter);
             if (!TextUtils.equals(currentLetter, previousLetter)){
                 holder.letter.setVisibility(View.VISIBLE);
                 holder.letter.setText(currentLetter);

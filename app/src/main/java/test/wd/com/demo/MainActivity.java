@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import test.wd.com.demo.activity.BannerClickActivity;
+import test.wd.com.demo.activity.CalendarActivity;
 import test.wd.com.demo.activity.ImeiInfoActivity;
 import test.wd.com.demo.activity.LetterSearchActivity;
 import test.wd.com.demo.activity.PermissionActivity;
@@ -41,6 +43,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Button btnIMEI = (Button) findViewById(R.id.btn_imei);
         Button btnAndroidJS = (Button) findViewById(R.id.btn_andriod_Js);
         Button btnLetterSearch = (Button) findViewById(R.id.btn_Letter_search);
+        Button btnCalendar = (Button) findViewById(R.id.btn_calendar);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
         btnUpdateApk.setOnClickListener(this);
@@ -48,6 +51,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnIMEI.setOnClickListener(this);
         btnAndroidJS.setOnClickListener(this);
         btnLetterSearch.setOnClickListener(this);
+        btnCalendar.setOnClickListener(this);
     }
 
 
@@ -76,6 +80,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.btn_Letter_search:
                 //字母检索
                 startActivity(new Intent(mContext, LetterSearchActivity.class));
+                break;
+            case R.id.btn_calendar:
+                Log.d("Dong", "");
+                startActivity(new Intent(mContext, CalendarActivity.class));
                 break;
         }
     }

@@ -15,5 +15,6 @@
     <color name="cp_gray">#8c8c8c</color>
     <color name="cp_gray_deep">#5c5c5c</color>
     <color name="cp_alpha_gray">#CC646464</color>
-    <color name="cp_theme_gray">#646464</color>
+    <color name="cp_theme_gray">#646464</color>colorWhite
+    <color name="colorWhite">#CC646464</color>
 </resources>

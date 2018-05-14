@@ -46,5 +46,10 @@
         android:text="字母检索"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <Button
+        android:text="日历"
+        android:id="@+id/btn_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
 </LinearLayout>

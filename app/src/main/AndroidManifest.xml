@@ -74,6 +74,9 @@
         <activity
             android:name=".activity.LetterSearchActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CalendarActivity"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.DownloadService" />
     </application>
