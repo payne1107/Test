@@ -5,9 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import test.wd.com.demo.R;
 import test.wd.com.demo.adapter.DateAdapter;
@@ -58,13 +60,22 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
         dateAdapter = new DateAdapter(this, days, year, month);//传入当前月的年
         record_gridView.setAdapter(dateAdapter);
         record_gridView.setVerticalSpacing(60);
-        record_gridView.setEnabled(false);
+        record_gridView.setEnabled(true);
         /**
          * 以下是初始化其他组件
          */
         record_left = (ImageView) findViewById(R.id.record_left);
         record_right = (ImageView) findViewById(R.id.record_right);
         record_title = (TextView) findViewById(R.id.record_title);
+
+        record_gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int day = (int) parent.getAdapter().getItem(position);
+                Toast.makeText(CalendarActivity.this,"您点击的是---》" + day,Toast.LENGTH_SHORT).show();
+                dateAdapter.updateTextColor(position);
+            }
+        });
     }
 
 

@@ -2,6 +2,8 @@ package test.wd.com.demo.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,8 @@ public class DateAdapter  extends BaseAdapter {
     private Context context;
     private int year;
     private int month;
+    private int UPDATE_TEXT_COLOR;
+    private ViewHolder viewHolder;
 
     public DateAdapter(Context context, int[][] days, int year, int month) {
         this.context = context;
@@ -34,6 +38,25 @@ public class DateAdapter  extends BaseAdapter {
         this.month = month;
     }
 
+    public void updateTextColor(int position) {
+        UPDATE_TEXT_COLOR = position;
+        notifyDataSetChanged();
+    }
+
+    /***
+     * 设置选中后的字体颜色和背景色
+     * @param position
+     */
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    private void setTextStyle(int position) {
+        if (UPDATE_TEXT_COLOR == position) {
+            viewHolder.date_item.setTextColor(context.getResources().getColor(R.color.ff6000));
+            viewHolder.date_item.setBackground(context.getResources().getDrawable(R.drawable.background_item));
+        } else {
+            viewHolder.date_item.setTextColor(context.getResources().getColor(R.color.colorAccent));
+            viewHolder.date_item.setBackground(context.getResources().getDrawable(R.drawable.background_item));
+        }
+    }
     @Override
     public int getCount() {
         return days.length;
@@ -49,13 +72,15 @@ public class DateAdapter  extends BaseAdapter {
         return i;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder viewHolder;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_calendar, null);
             viewHolder = new ViewHolder();
             viewHolder.date_item = (TextView) view.findViewById(R.id.date_item);
+
+            setTextStyle(i);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
