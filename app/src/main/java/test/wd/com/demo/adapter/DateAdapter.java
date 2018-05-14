@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,7 @@ public class DateAdapter  extends BaseAdapter {
 
     public void updateTextColor(int position) {
         UPDATE_TEXT_COLOR = position;
+        Log.d("Dong", "UPDATE_TEXT_COLOR --" +UPDATE_TEXT_COLOR);
         notifyDataSetChanged();
     }
 
@@ -53,7 +55,8 @@ public class DateAdapter  extends BaseAdapter {
             viewHolder.date_item.setTextColor(context.getResources().getColor(R.color.ff6000));
             viewHolder.date_item.setBackground(context.getResources().getDrawable(R.drawable.background_item));
         } else {
-            viewHolder.date_item.setTextColor(context.getResources().getColor(R.color.colorAccent));
+            Log.d("Dong", " UPDATE_TEXT_COLOR---" +UPDATE_TEXT_COLOR +" |||||| position--->" + position) ;
+            viewHolder.date_item.setTextColor(context.getResources().getColor(R.color.cp_colorAccent));
             viewHolder.date_item.setBackground(context.getResources().getDrawable(R.drawable.background_item));
         }
     }
