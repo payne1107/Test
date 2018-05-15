@@ -27,6 +27,7 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
     private TextView record_title;//标题
     private int year;
     private int month;
+    private int day;
     private String title;
     private int[][] days = new int[6][7];
     @Override
@@ -44,6 +45,7 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
     private void initData() {
         year = DateUtils.getYear();
         month = DateUtils.getMonth();
+        day = DateUtils.getCurrentDayOfMonth();
     }
 
     private void initEvent() {
@@ -57,7 +59,7 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
          */
         record_gridView = (GridView) findViewById(R.id.record_gridView);
         days = DateUtils.getDayOfMonthFormat(2018, 5);
-        dateAdapter = new DateAdapter(this, days, year, month);//传入当前月的年
+        dateAdapter = new DateAdapter(this, days, year, month,day);//传入当前月的年
         record_gridView.setAdapter(dateAdapter);
         record_gridView.setVerticalSpacing(60);
         record_gridView.setEnabled(true);
@@ -71,17 +73,16 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
         record_gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int day = (int) parent.getAdapter().getItem(position);
-                Toast.makeText(CalendarActivity.this,"您点击的是---》" + day,Toast.LENGTH_SHORT).show();
+                int clickDay = (int) parent.getAdapter().getItem(position);
+                Toast.makeText(CalendarActivity.this,"您点击的是---》" + clickDay  +"当前日期---》"  + day +"moth--->" + month,Toast.LENGTH_SHORT).show();
                 dateAdapter.updateTextColor(position);
+                dateAdapter.notifyDataSetChanged();
             }
         });
     }
 
-
     /**
      * 下一个月
-     *
      * @return
      */
     private int[][] nextMonth() {
@@ -115,7 +116,7 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
      * 设置标题
      */
     private void setTile() {
-        title = year + "年" + month + "月";
+        title = year + "年" + month + "月" +day+"日";
         Log.d("Dong", "title ----> " + title);
         record_title.setText(title);
     }
@@ -125,14 +126,14 @@ public class CalendarActivity extends FragmentActivity implements View.OnClickLi
         switch (view.getId()) {
             case R.id.record_left:
                 days = prevMonth();
-                dateAdapter = new DateAdapter(this, days, year, month);
+                dateAdapter = new DateAdapter(this, days, year, month,day);
                 record_gridView.setAdapter(dateAdapter);
                 dateAdapter.notifyDataSetChanged();
                 setTile();
                 break;
             case R.id.record_right:
                 days = nextMonth();
-                dateAdapter = new DateAdapter(this, days, year, month);
+                dateAdapter = new DateAdapter(this, days, year, month,day);
                 record_gridView.setAdapter(dateAdapter);
                 dateAdapter.notifyDataSetChanged();
                 setTile();
