@@ -33,4 +33,5 @@ dependencies {
     compile project(':permissiongen')
     compile 'com.jakewharton:butterknife:7.0.1'
     compile project(path: ':UpdateAppUtilslib')
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
 }

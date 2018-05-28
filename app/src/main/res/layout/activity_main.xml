@@ -51,5 +51,20 @@
         android:id="@+id/btn_calendar"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_choose_date"
+        android:text="日期选择器"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_play_video"
+        android:text="WebView播放视频"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_contacts"
+        android:text="分享短信"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
 </LinearLayout>

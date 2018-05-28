@@ -25,16 +25,9 @@ public class DateAdapter  extends BaseAdapter {
     private int UPDATE_TEXT_COLOR = -1;
     private ViewHolder viewHolder;
 
-    public DateAdapter(Context context, int[][] days, int year, int month,int day) {
+    public DateAdapter(Context context, int[] days, int year, int month,int day) {
         this.context = context;
-        int dayNum = 0;
-        //将二维数组转化为一维数组，方便使用
-        for (int i = 0; i < days.length; i++) {
-            for (int j = 0; j < days[i].length; j++) {
-                this.days[dayNum] = days[i][j];
-                dayNum++;
-            }
-        }
+        this.days = days;
         this.year = year;
         this.month = month;
         this.day = day;
