@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="snactbar Test"
+        android:id="@+id/btn_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:text="测试"
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_clipboard"
+        android:text="获取剪贴面板数据"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_constraintlayout"
+        android:text="ConstraintLayout使用"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_anim_study"
+        android:text="动画属性"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>

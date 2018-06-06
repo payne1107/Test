@@ -22,6 +22,7 @@ import test.wd.com.demo.activity.BannerClickActivity;
 import test.wd.com.demo.activity.CalendarActivity;
 import test.wd.com.demo.activity.ImeiInfoActivity;
 import test.wd.com.demo.activity.LetterSearchActivity;
+import test.wd.com.demo.activity.OtherActivity;
 import test.wd.com.demo.activity.PermissionActivity;
 import test.wd.com.demo.activity.PlayVideoActivity;
 import test.wd.com.demo.activity.StatusBarActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate = (Button) findViewById(R.id.btn_choose_date);
         Button btnPlayVideo = (Button) findViewById(R.id.btn_play_video);
         Button btnContacts = (Button) findViewById(R.id.btn_contacts);
+        Button btnOther = findViewById(R.id.btn_other);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
         btnUpdateApk.setOnClickListener(this);
@@ -69,6 +71,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate.setOnClickListener(this);
         btnPlayVideo.setOnClickListener(this);
         btnContacts.setOnClickListener(this);
+        btnOther.setOnClickListener(this);
     }
 
 
@@ -113,6 +116,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //                Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
 //                startActivityForResult(intent, 1);
                 sendSms(this,"恩恩恩嗯嗯你你你");
+                break;
+            case R.id.btn_other:
+                startActivity(new Intent(mContext, OtherActivity.class));
                 break;
         }
     }
