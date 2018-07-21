@@ -84,6 +84,18 @@
         <activity
             android:name=".ListViewAndCheckboxActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ClicpBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ConstraintLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimStudyActivity"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.DownloadService" />
     </application>
