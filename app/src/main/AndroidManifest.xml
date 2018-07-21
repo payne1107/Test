@@ -81,6 +81,9 @@
         <activity
             android:name=".activity.PlayVideoActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListViewAndCheckboxActivity"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.DownloadService" />
     </application>

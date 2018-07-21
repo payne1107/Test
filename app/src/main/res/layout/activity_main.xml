@@ -66,5 +66,10 @@
         android:text="分享短信"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <Button
+        android:text="listview 和checkbox"
+        android:id="@+id/btn_listview_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
 </LinearLayout>
