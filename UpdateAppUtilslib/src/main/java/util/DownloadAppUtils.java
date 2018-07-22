@@ -45,10 +45,7 @@ class DownloadAppUtils {
         context.startActivity(intent);
     }
 
-
-
     public static void download(final Context context, String url,final String serverVersionName) {
-
         String packageName = context.getPackageName();
         String filePath = null;
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {//外部存储卡
@@ -96,15 +93,10 @@ class DownloadAppUtils {
                 }).start();
     }
 
-
-
-
     private static void send(Context context,int progress,String serverVersionName) {
         Intent intent = new Intent("teprinciple.update");
         intent.putExtra("progress",progress);
         intent.putExtra("title",serverVersionName);
         context.sendBroadcast(intent);
     }
-
-
 }

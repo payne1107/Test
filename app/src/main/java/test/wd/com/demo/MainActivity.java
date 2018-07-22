@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -59,7 +60,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate = (Button) findViewById(R.id.btn_choose_date);
         Button btnPlayVideo = (Button) findViewById(R.id.btn_play_video);
         Button btnContacts = (Button) findViewById(R.id.btn_contacts);
-        Button btnOther = findViewById(R.id.btn_other);
+        Button btnOther = (Button) findViewById(R.id.btn_other);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
         btnUpdateApk.setOnClickListener(this);
@@ -138,7 +139,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 .setMaxMillseconds(System.currentTimeMillis() +   ConfigUtil.TenYears)
                 .setCurrentMillseconds(System.currentTimeMillis()/* - ConfigUtil.TenYears*/)//设置当前日期
                 .setThemeColor(getResources().getColor(R.color.cccccc))
-                .setType(Type.YEAR_MONTH_DAY)
+//                .setType(Type.YEAR_MONTH_DAY) //区分到日还是到分
+                .setType(Type.ALL)
                 .setWheelItemTextNormalColor(getResources().getColor(R.color.text_color_9))
                 .setWheelItemTextSelectorColor(getResources().getColor(R.color.text_color_9))
                 .setWheelItemTextSize(16)
@@ -149,7 +151,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onDateSet(TimePickerDialog timePickerView, long millseconds) {
         Date d = new Date(millseconds);
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        Log.d("Dong", "---------------------->" + d.toString());
+
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd-HH:mm");
         btnChooseDate.setText(sf.format(d));
     }
 

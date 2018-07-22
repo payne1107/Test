@@ -29,11 +29,11 @@ public class OtherActivity extends FragmentActivity implements View.OnClickListe
     }
 
     private void initView() {
-        Button btnSnackBar = findViewById(R.id.btn_snackbar);
-        Button btnTest = findViewById(R.id.btn_test);
-        Button btnClipboard = findViewById(R.id.btn_clipboard);
-        Button btnConstraintlayout =findViewById(R.id.btn_constraintlayout);
-        Button btnAnimStudy = findViewById(R.id.btn_anim_study);
+        Button btnSnackBar = (Button) findViewById(R.id.btn_snackbar);
+        Button btnTest = (Button) findViewById(R.id.btn_test);
+        Button btnClipboard = (Button) findViewById(R.id.btn_clipboard);
+        Button btnConstraintlayout = (Button) findViewById(R.id.btn_constraintlayout);
+        Button btnAnimStudy = (Button) findViewById(R.id.btn_anim_study);
 
         btnAnimStudy.setOnClickListener(this);
         btnClipboard.setOnClickListener(this);

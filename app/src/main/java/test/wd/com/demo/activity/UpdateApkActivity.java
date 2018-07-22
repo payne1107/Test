@@ -25,7 +25,7 @@ public class UpdateApkActivity extends FragmentActivity implements View.OnClickL
     private static final int UPDATE_APK_CODE = 200;
     private Context mContext;
 
-    String apkPath = "http://issuecdn.baidupcs.com/issue/netdisk/apk/BaiduNetdisk_7.15.1.apk";
+    String apkPath = "http://m.lieshoujianzhi.com/mobile/download";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

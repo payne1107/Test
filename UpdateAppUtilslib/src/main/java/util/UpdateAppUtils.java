@@ -142,7 +142,7 @@ public class UpdateAppUtils {
                             if (isWifiConnected(activity)){
 //                                DownloadAppUtils.downloadForAutoInstall(activity, apkPath, "demo.apk", serverVersionName);
                                 DownloadAppUtils.download(activity, apkPath, serverVersionName);
-                            }else {
+                            } else {
                                 new ConfirmDialog(activity, new Callback() {
                                     @Override
                                     public void callback(int position) {
@@ -187,6 +187,4 @@ public class UpdateAppUtils {
         }
         return false;
     }
-
-
 }
