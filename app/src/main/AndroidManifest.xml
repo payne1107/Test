@@ -82,7 +82,7 @@
             android:name=".activity.PlayVideoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OtherActivity"
+            android:name=".ListViewAndCheckboxActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.TestActivity"

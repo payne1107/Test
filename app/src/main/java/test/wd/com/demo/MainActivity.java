@@ -60,6 +60,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate = (Button) findViewById(R.id.btn_choose_date);
         Button btnPlayVideo = (Button) findViewById(R.id.btn_play_video);
         Button btnContacts = (Button) findViewById(R.id.btn_contacts);
+
+        Button btnListViewCheckbox = (Button) findViewById(R.id.btn_listview_checkbox);
         Button btnOther = (Button) findViewById(R.id.btn_other);
         btn_perimission.setOnClickListener(this);
         btnStep.setOnClickListener(this);
@@ -72,6 +74,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate.setOnClickListener(this);
         btnPlayVideo.setOnClickListener(this);
         btnContacts.setOnClickListener(this);
+        btnListViewCheckbox.setOnClickListener(this);
         btnOther.setOnClickListener(this);
     }
 
@@ -118,6 +121,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 //                startActivityForResult(intent, 1);
                 sendSms(this,"恩恩恩嗯嗯你你你");
                 break;
+            case R.id.btn_listview_checkbox:
+                startActivity(new Intent(mContext,ListViewAndCheckboxActivity.class));
+
+                break;
+
             case R.id.btn_other:
                 startActivity(new Intent(mContext, OtherActivity.class));
                 break;
