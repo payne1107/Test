@@ -45,13 +45,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.StepActivity"
@@ -96,6 +100,17 @@
         <activity
             android:name=".activity.AnimStudyActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewStepActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StepActivity1"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.JNIActvity" />
 
         <service android:name=".service.DownloadService" />
     </application>

@@ -22,6 +22,7 @@ import java.util.List;
 import test.wd.com.demo.activity.BannerClickActivity;
 import test.wd.com.demo.activity.CalendarActivity;
 import test.wd.com.demo.activity.ImeiInfoActivity;
+import test.wd.com.demo.activity.JNIActvity;
 import test.wd.com.demo.activity.LetterSearchActivity;
 import test.wd.com.demo.activity.OtherActivity;
 import test.wd.com.demo.activity.PermissionActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private List<String> mList = new ArrayList<>();
     private TimePickerDialog dialogDay;
     private Button btnChooseDate;
+    private Button btnJni;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnChooseDate = (Button) findViewById(R.id.btn_choose_date);
         Button btnPlayVideo = (Button) findViewById(R.id.btn_play_video);
         Button btnContacts = (Button) findViewById(R.id.btn_contacts);
+        btnJni = findViewById(R.id.btn_jni);
 
         Button btnListViewCheckbox = (Button) findViewById(R.id.btn_listview_checkbox);
         Button btnOther = (Button) findViewById(R.id.btn_other);
@@ -76,6 +79,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         btnContacts.setOnClickListener(this);
         btnListViewCheckbox.setOnClickListener(this);
         btnOther.setOnClickListener(this);
+        btnJni.setOnClickListener(this);
     }
 
 
@@ -128,6 +132,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             case R.id.btn_other:
                 startActivity(new Intent(mContext, OtherActivity.class));
+                break;
+            case R.id.btn_jni:
+                startActivity(new Intent(mContext, JNIActvity.class));
                 break;
         }
     }

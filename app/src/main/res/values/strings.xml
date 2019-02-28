@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string-array name="str_array_step">
+        <item >指示器1</item>
+        <item >指示器2</item>
+        <item >指示器3</item>   <!-- 特殊字符要转义-->
+        <item> 指示器4</item>
+    </string-array>
 </resources>

@@ -77,6 +77,11 @@
         android:id="@+id/btn_other"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_jni"
+        android:text="JNI"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
 
 </LinearLayout>

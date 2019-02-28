@@ -20,4 +20,6 @@
     <color name="color_46c11b">#46c11b</color>
     <color name="cccccc">#ccc</color>
     <color name="text_color_9">#999</color>
+    <color name="text_color_3">#333</color>
+    <color name="text_color_4">#666</color>
 </resources>

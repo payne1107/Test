@@ -24,7 +24,8 @@ import test.wd.com.demo.R;
 public class BannerClickActivity extends FragmentActivity {
     private WebView webView;
     private ProgressBar progressBar;
-    private String bannerUrl = "http://m.lieshoujianzhi.com/ceshi.html";
+//        private String bannerUrl = "http://m.lieshoujianzhi.com/ceshi.html";
+    private String bannerUrl = "https://wxpay.wxutil.com/mch/pay/h5.v2.php";
 //    private String info = "711" + "," + "Rabbit-eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTg1NjUwNTQ0MSIsImV4cCI6MTUyNjM3NzU3MCwiaWF0IjoxNTI1NzcyNzcwfQ.-E3zuku8ahqh0N0ClPb9rOU7oXKZ0JZLu8WAihX72vzUXGNwp-dP8McUGF00nakEyWkdrQ5AdNEZkIP0XK25ag" +
 //            "," + "15856505441" + "," + getAppVersionName();
 
